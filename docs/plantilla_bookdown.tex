@@ -37,7 +37,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Plantilla para libros con bookdown},
+  pdftitle={Plantilla de libro hecho con el paquete bookdown},
   pdfauthor={Autor 1 Fulanito, Autor 2 Sutanito},
   colorlinks=true,
   linkcolor={Maroon},
@@ -113,7 +113,14 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
-% Para definir el idioma espanol
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage[bf,singlelinecheck=off]{caption}
+\captionsetup[table]{labelsep=space}
+\captionsetup[figure]{labelsep=space}
+\usepackage[scale=.8]{sourcecodepro}
+
+%----------------- Para definir el idioma espanol --------
 \ifxetex
   \usepackage{polyglossia}
   \setmainlanguage{spanish}
@@ -123,65 +130,10 @@
 \else
   \usepackage[spanish,es-tabla]{babel}
 \fi
+%---------------------------------------------------------
 
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage[bf,singlelinecheck=off]{caption}
 
-\usepackage{Alegreya}
-\usepackage[scale=.7]{sourcecodepro}
-
-\usepackage{framed,color}
-\definecolor{shadecolor}{RGB}{248,248,248}
-
-\renewcommand{\textfraction}{0.05}
-\renewcommand{\topfraction}{0.8}
-\renewcommand{\bottomfraction}{0.8}
-\renewcommand{\floatpagefraction}{0.75}
-
-\renewenvironment{quote}{\begin{VF}}{\end{VF}}
-\let\oldhref\href
-\renewcommand{\href}[2]{#2\footnote{\url{#1}}}
-
-\ifxetex
-  \usepackage{letltxmacro}
-  \setlength{\XeTeXLinkMargin}{1pt}
-  \LetLtxMacro\SavedIncludeGraphics\includegraphics
-  \def\includegraphics#1#{% #1 catches optional stuff (star/opt. arg.)
-    \IncludeGraphicsAux{#1}%
-  }%
-  \newcommand*{\IncludeGraphicsAux}[2]{%
-    \XeTeXLinkBox{%
-      \SavedIncludeGraphics#1{#2}%
-    }%
-  }%
-\fi
-
-\makeatletter
-\newenvironment{kframe}{%
-\medskip{}
-\setlength{\fboxsep}{.8em}
- \def\at@end@of@kframe{}%
- \ifinner\ifhmode%
-  \def\at@end@of@kframe{\end{minipage}}%
-  \begin{minipage}{\columnwidth}%
- \fi\fi%
- \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
- \colorbox{shadecolor}{##1}\hskip-\fboxsep
-     % There is no \\@totalrightmargin, so:
-     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
- \MakeFramed {\advance\hsize-\width
-   \@totalleftmargin\z@ \linewidth\hsize
-   \@setminipage}}%
- {\par\unskip\endMakeFramed%
- \at@end@of@kframe}
-\makeatother
-
-\makeatletter
-\@ifundefined{Shaded}{
-}{\renewenvironment{Shaded}{\begin{kframe}}{\end{kframe}}}
-\makeatother
-
+%----------------- Para definir los bloques --------------
 \newenvironment{rmdblock}[1]
   {
   \begin{itemize}
@@ -213,6 +165,44 @@
 \newenvironment{rmdwarning}
   {\begin{rmdblock}{warning}}
   {\end{rmdblock}}
+%---------------------------------------------------------
+
+
+
+
+\usepackage{framed,color}
+\definecolor{shadecolor}{RGB}{248,248,248}
+
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.8}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\floatpagefraction}{0.75}
+
+\renewenvironment{quote}{\begin{VF}}{\end{VF}}
+\let\oldhref\href
+\renewcommand{\href}[2]{#2\footnote{\url{#1}}}
+
+\makeatletter
+\newenvironment{kframe}{%
+\medskip{}
+\setlength{\fboxsep}{.8em}
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\renewenvironment{Shaded}{\begin{kframe}}{\end{kframe}}
 
 \usepackage{makeidx}
 \makeindex
@@ -234,7 +224,7 @@
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
-\title{Plantilla para libros con bookdown}
+\title{Plantilla de libro hecho con el paquete bookdown}
 \author{Autor 1 Fulanito, Autor 2 Sutanito}
 \date{2021-09-17}
 
@@ -261,53 +251,76 @@
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
-\hypertarget{bienvenido}{%
-\chapter*{Bienvenido}\label{bienvenido}}
+\listoffigures
+\listoftables
+\hypertarget{prefacio}{%
+\chapter*{Prefacio}\label{prefacio}}
 
+
+Hi there, this is my great book.
 
 \begin{center}\includegraphics[width=0.5\linewidth]{images/cover} \end{center}
 
-Este libro está destinado para estudiantes lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut elit condimentum, rutrum odio sed, ullamcorper libero. Fusce lobortis feugiat erat sed ornare. Nam magna odio, dapibus ac massa ut, auctor condimentum nisi. Proin sed lacus tincidunt, iaculis quam ac, condimentum justo.
+\hypertarget{por-quuxe9-leer-este-libro}{%
+\section*{¿Por qué leer este libro?}\label{por-quuxe9-leer-este-libro}}
 
-\href{https://ciencias.medellin.unal.edu.co/escuelas/estadistica/}{Autor1 Fulanito de tal}\\
-\href{https://ciencias.medellin.unal.edu.co/centros/documentacionrafaelbotero/}{Autor2 Sutanito de tal}
+
+It is very important\ldots{}
 
 \hypertarget{estructura-del-libro}{%
 \section*{Estructura del libro}\label{estructura-del-libro}}
 
 
-En el capítulo \ref{intro} se presenta una introducción, en el capítulo \ref{ecua} se muestra como incluir ecuaciones con LaTeX, en el capítulo \ref{met} no se muestra nada y en el capítulo \ref{svm} se explican las máquinas de soporte vectorial.
+El capítulo \ref{introduction} es una introducción, el capítulo \ref{ecua} muestra como incluir ecuaciones con LaTeX y en el capítulo \ref{svm} se da una explicación sencilla de máquinas de soporte vectorial.
 
-\hypertarget{software-y-convenciones}{%
-\section*{Software y convenciones}\label{software-y-convenciones}}
+\hypertarget{software-information-and-conventions}{%
+\section*{Software information and conventions}\label{software-information-and-conventions}}
 
 
-Para realizar este libro usamos los paquetes \textbf{knitr}\index{knitr} \citep{xie2015} y \textbf{bookdown}\index{bookdown} \citep{R-bookdown} que permiten unir la ventajas de LaTeX y R en un mismo archivo.
-
-En todo el libro se presentarán códigos que el lector puede copiar y pegar en su consola de R para obtener los mismos resultados aquí del libro. Los códigos se destacan en una caja de color similar a la mostrada a continuación.
+I used the \textbf{knitr}\index{knitr} package \citep{xie2015} and the \textbf{bookdown}\index{bookdown} package \citep{R-bookdown} to compile my book. My R session information is shown below:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\DecValTok{4} \SpecialCharTok{+} \DecValTok{6}
-\NormalTok{a }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{)}
-\DecValTok{5} \SpecialCharTok{*}\NormalTok{ a}
-\DecValTok{1}\SpecialCharTok{:}\DecValTok{10}
+\NormalTok{xfun}\SpecialCharTok{::}\FunctionTok{session\_info}\NormalTok{()}
 \end{Highlighting}
 \end{Shaded}
 
-Los resultados o salidas obtenidos de cualquier código se destacan con dos símbolos de númeral (\texttt{\#\#}) al inicio de cada línea o renglón, esto quiere decir que todo lo que inicie con \texttt{\#\#} son resultados obtenidos y \textbf{NO} los debe copiar. Abajo se muestran los resultados obtenidos luego de correr el código anterior.
-
 \begin{verbatim}
-## [1] 10
+## R version 4.1.1 (2021-08-10)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 10 x64 (build 19042)
+## 
+## Locale:
+##   LC_COLLATE=Spanish_Latin America.1252 
+##   LC_CTYPE=Spanish_Latin America.1252   
+##   LC_MONETARY=Spanish_Latin America.1252
+##   LC_NUMERIC=C                          
+##   LC_TIME=Spanish_Latin America.1252    
+## 
+## Package version:
+##   base64enc_0.1.3 bookdown_0.23   compiler_4.1.1 
+##   digest_0.6.27   evaluate_0.14   fastmap_1.1.0  
+##   glue_1.4.2      graphics_4.1.1  grDevices_4.1.1
+##   highr_0.9       htmltools_0.5.2 jquerylib_0.1.4
+##   jsonlite_1.7.2  knitr_1.34      magrittr_2.0.1 
+##   methods_4.1.1   rlang_0.4.11    rmarkdown_2.10 
+##   rstudioapi_0.13 stats_4.1.1     stringi_1.7.4  
+##   stringr_1.4.0   tinytex_0.33    tools_4.1.1    
+##   utils_4.1.1     xfun_0.25       yaml_2.2.1
 \end{verbatim}
 
-\begin{verbatim}
-## [1]  5 25 30
-\end{verbatim}
+Package names are in bold text (e.g., \textbf{rmarkdown}), and inline code and filenames are formatted in a typewriter font (e.g., \texttt{knitr::knit(\textquotesingle{}foo.Rmd\textquotesingle{})}). Function names are followed by parentheses (e.g., \texttt{bookdown::render\_book()}).
 
-\begin{verbatim}
-##  [1]  1  2  3  4  5  6  7  8  9 10
-\end{verbatim}
+\hypertarget{agradecimientos}{%
+\section*{Agradecimientos}\label{agradecimientos}}
+
+
+A lot of people helped me when I was writing the book.
+
+\begin{flushright}
+Frida Gomam\\
+on the Mars
+\end{flushright}
 
 \hypertarget{bloques-informativos}{%
 \section*{Bloques informativos}\label{bloques-informativos}}
@@ -327,35 +340,36 @@ Sugerencia.
 Advertencia.
 \end{rmdwarning}
 
-\hypertarget{intro}{%
-\chapter{Introduction}\label{intro}}
+\hypertarget{about-the-author}{%
+\chapter*{About the Author}\label{about-the-author}}
 
-You can label chapter and section titles using \texttt{\{\#label\}} after them, e.g., we can reference Chapter \ref{intro}. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \ref{met}.
 
-Figures and tables with captions will be placed in \texttt{figure} and \texttt{table} environments, respectively.
+Frida Gomam is a famous lady. Police will always let her go.
+
+\mainmatter
+
+\hypertarget{introduction}{%
+\chapter{Introduction}\label{introduction}}
+
+Now unplug your Internet cable, and start doing some serious work.
+
+We have a nice figure in Figure \ref{fig:hello}, and also a table in Table \ref{tab:iris}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, .}\DecValTok{1}\NormalTok{, .}\DecValTok{1}\NormalTok{))}
-\FunctionTok{plot}\NormalTok{(pressure, }\AttributeTok{type =} \StringTok{\textquotesingle{}b\textquotesingle{}}\NormalTok{, }\AttributeTok{pch =} \DecValTok{19}\NormalTok{)}
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{1}\NormalTok{, .}\DecValTok{1}\NormalTok{))}
+\FunctionTok{plot}\NormalTok{(cars, }\AttributeTok{pch =} \DecValTok{19}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{figure}
-
-{\centering \includegraphics[width=0.8\linewidth]{plantilla_libros_con_bookdown_files/figure-latex/nice-fig-1} 
-
-}
-
-\caption{Here is a nice figure!}\label{fig:nice-fig}
+\includegraphics[width=0.9\linewidth]{plantilla_bookdown_files/figure-latex/hello-1} \caption{Hello World!}\label{fig:hello}
 \end{figure}
-
-Reference a figure by its code chunk label with the \texttt{fig:} prefix, e.g., see Figure \ref{fig:nice-fig}. Similarly, you can reference tables generated from \texttt{knitr::kable()}, e.g., see Table \ref{tab:nice-tab}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}
-  \FunctionTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\AttributeTok{caption =} \StringTok{\textquotesingle{}Here is a nice table!\textquotesingle{}}\NormalTok{,}
+  \FunctionTok{head}\NormalTok{(iris), }\AttributeTok{caption =} \StringTok{\textquotesingle{}The boring iris data.\textquotesingle{}}\NormalTok{,}
   \AttributeTok{booktabs =} \ConstantTok{TRUE}
 \NormalTok{)}
 \end{Highlighting}
@@ -363,7 +377,7 @@ Reference a figure by its code chunk label with the \texttt{fig:} prefix, e.g., 
 
 \begin{table}
 
-\caption{\label{tab:nice-tab}Here is a nice table!}
+\caption{\label{tab:iris}The boring iris data.}
 \centering
 \begin{tabular}[t]{rrrrl}
 \toprule
@@ -376,27 +390,11 @@ Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
 5.0 & 3.6 & 1.4 & 0.2 & setosa\\
 \addlinespace
 5.4 & 3.9 & 1.7 & 0.4 & setosa\\
-4.6 & 3.4 & 1.4 & 0.3 & setosa\\
-5.0 & 3.4 & 1.5 & 0.2 & setosa\\
-4.4 & 2.9 & 1.4 & 0.2 & setosa\\
-4.9 & 3.1 & 1.5 & 0.1 & setosa\\
-\addlinespace
-5.4 & 3.7 & 1.5 & 0.2 & setosa\\
-4.8 & 3.4 & 1.6 & 0.2 & setosa\\
-4.8 & 3.0 & 1.4 & 0.1 & setosa\\
-4.3 & 3.0 & 1.1 & 0.1 & setosa\\
-5.8 & 4.0 & 1.2 & 0.2 & setosa\\
-\addlinespace
-5.7 & 4.4 & 1.5 & 0.4 & setosa\\
-5.4 & 3.9 & 1.3 & 0.4 & setosa\\
-5.1 & 3.5 & 1.4 & 0.3 & setosa\\
-5.7 & 3.8 & 1.7 & 0.3 & setosa\\
-5.1 & 3.8 & 1.5 & 0.3 & setosa\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-You can write citations, too. For example, we are using the \textbf{bookdown} package \citep{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
+More chapters to come in \texttt{02-foo.Rmd}, \texttt{03-bar}.Rmd, \ldots{}
 
 \hypertarget{ecua}{%
 \chapter{Ecuaciones}\label{ecua}}
@@ -453,15 +451,34 @@ y para referenciarla se escribe \texttt{\textbackslash{}@ref(eq:binom)} con lo c
 Para obtener más detalles de cómo incluir ecuaciones se recomienda consultar este \href{https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html\#theorems}{enlace}.
 \end{rmdtip}
 
-\hypertarget{met}{%
-\chapter{Methods}\label{met}}
-
-We describe our methods in this chapter.
-
 \hypertarget{svm}{%
 \chapter{Support vector machine}\label{svm}}
 
 \citet{Cortes1995} en el artículo titulado ``Support-Vector Networks'' propusieron las máquinas de soporte vectorial (svm) para el problema de clasificación.
+
+Abajo se muestra una ilustración del método.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{images/svm} 
+
+}
+
+\caption{Ilustración de svm.}\label{fig:rmarkdown}
+\end{figure}
+
+\cleardoublepage
+
+\hypertarget{appendix-appendix}{%
+\appendix \addcontentsline{toc}{chapter}{\appendixname}}
+
+
+\hypertarget{more-to-say}{%
+\chapter{More to Say}\label{more-to-say}}
+
+Yeah! I have finished my book, but I have more to say about some topics. Let me explain them in this appendix.
+
+To know more about \textbf{bookdown}, see \url{https://bookdown.org}.
 
   \bibliography{book.bib,packages.bib}
 

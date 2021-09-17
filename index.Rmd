@@ -1,5 +1,5 @@
 --- 
-title: "Plantilla para libros con bookdown"
+title: "Plantilla de libro hecho con el paquete bookdown"
 author: "Autor 1 Fulanito, Autor 2 Sutanito"
 date: "`r Sys.Date()`"
 documentclass: krantz
@@ -7,10 +7,10 @@ bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 colorlinks: yes
-lot: false
-lof: false
+lot: yes
+lof: yes
 site: bookdown::bookdown_site
-description: "Plantilla para libros hechos con bookdown."
+description: "Una plantilla sencilla para crear libros con bookdown."
 github-repo: fhernanb/plantilla_libros_con_bookdown
 graphics: yes
 cover-image: images/cover.jpg
@@ -20,53 +20,46 @@ cover-image: images/cover.jpg
 options(
   htmltools.dir.version = FALSE, formatR.indent = 2, width = 55, digits = 4
 )
+
 # install the packages needed by this book; you fill out c(), e.g. c('ggplot2', 'dplyr')
 lapply(c('xfun'), function(pkg) {
   if (system.file(package = pkg) == '') install.packages(pkg)
 })
 ```
 
-# Bienvenido {-}
+# Prefacio {-}
 
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'), 'packages.bib')
-```
+Hi there, this is my great book.
 
 ```{r echo=FALSE, out.width="50%", fig.align='center'}
 knitr::include_graphics("images/cover.jpg")
 ```
 
-Este libro está destinado para estudiantes lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut elit condimentum, rutrum odio sed, ullamcorper libero. Fusce lobortis feugiat erat sed ornare. Nam magna odio, dapibus ac massa ut, auctor condimentum nisi. Proin sed lacus tincidunt, iaculis quam ac, condimentum justo.
+## ¿Por qué leer este libro? {-}
 
-[Autor1 Fulanito de tal](https://ciencias.medellin.unal.edu.co/escuelas/estadistica/)  
-[Autor2 Sutanito de tal](https://ciencias.medellin.unal.edu.co/centros/documentacionrafaelbotero/)  
+It is very important...
 
 ## Estructura del libro {-}
 
-En el capítulo \@ref(intro) se presenta una introducción, en el capítulo \@ref(ecua) se muestra como incluir ecuaciones con LaTeX, en el capítulo \@ref(met) no se muestra nada y en el capítulo \@ref(svm) se explican las máquinas de soporte vectorial.
+El capítulo \@ref(introduction) es una introducción, el capítulo \@ref(ecua) muestra como incluir ecuaciones con LaTeX y en el capítulo \@ref(svm) se da una explicación sencilla de máquinas de soporte vectorial.
 
-## Software y convenciones {-}
+## Software information and conventions {-}
 
-Para realizar este libro usamos los paquetes **knitr**\index{knitr} [@xie2015] y **bookdown**\index{bookdown} [@R-bookdown] que permiten unir la ventajas de LaTeX y R en un mismo archivo.
+I used the **knitr**\index{knitr} package [@xie2015] and the **bookdown**\index{bookdown} package [@R-bookdown] to compile my book. My R session information is shown below:
 
-En todo el libro se presentarán códigos que el lector puede copiar y pegar en su consola de R para obtener los mismos resultados aquí del libro. Los códigos se destacan en una caja de color similar a la mostrada a continuación.
-
-```{r, eval=F}
-4 + 6
-a <- c(1, 5, 6)
-5 * a
-1:10
+```{r}
+xfun::session_info()
 ```
 
-Los resultados o salidas obtenidos de cualquier código se destacan con dos símbolos de númeral (`##`) al inicio de cada línea o renglón, esto quiere decir que todo lo que inicie con `##` son resultados obtenidos y __NO__ los debe copiar. Abajo se muestran los resultados obtenidos luego de correr el código anterior.
+Package names are in bold text (e.g., **rmarkdown**), and inline code and filenames are formatted in a typewriter font (e.g., `knitr::knit('foo.Rmd')`). Function names are followed by parentheses (e.g., `bookdown::render_book()`).
 
-```{r, echo=F}
-4 + 6
-a <- c(1, 5, 6)
-5 * a
-1:10
+## Agradecimientos {-}
+
+A lot of people helped me when I was writing the book.
+
+```{block2, type='flushright', html.tag='p'}
+Frida Gomam  
+on the Mars
 ```
 
 ## Bloques informativos {-}
