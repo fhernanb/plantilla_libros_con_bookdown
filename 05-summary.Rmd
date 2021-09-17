@@ -1,3 +1,3 @@
-# Final Words
+# Support vector machine
 
-We have finished a nice book.
+@Cortes1995 en el artículo titulado "Support-Vector Networks" propusieron las máquinas de soporte vectorial (svm) para el problema de clasificación.

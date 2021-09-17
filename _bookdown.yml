@@ -1,6 +1,21 @@
-book_filename: "libro_mod_pred"
-language:
-  ui:
-    chapter_name: ""
+book_filename: "plantilla_libros_con_bookdown"
+clean: [packages.bib, bookdown.bbl]
 delete_merged_file: true
 output_dir: "docs"
+language:
+  ui:
+    chapter_name: "Capítulo "
+  label:
+    fig: 'Figura '
+    tab: 'Tabla '
+    eq: 'Ecuación '
+    thm: 'Teorema '
+    lem: 'Lema '
+    def: 'Definición '
+    cor: 'Corolario '
+    prp: 'Proposición '
+    exm: 'Ejemplo '
+    exr: 'Ejercicio '
+    proof: 'Demostración. '
+    remark: 'Nota: '
+    solution: 'Solución. '

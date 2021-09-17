@@ -4,4 +4,8 @@ Some _significant_ applications are demonstrated in this chapter.
 
 ## Example one
 
+Bla bla bla.
+
 ## Example two
+
+Bla bla bla.

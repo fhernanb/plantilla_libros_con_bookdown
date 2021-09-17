@@ -1,17 +1,30 @@
 --- 
 title: "Plantilla para libros con bookdown"
-author: ["Fulanito de tal", "Sutanito de tal"]
+author: "Autor 1 Fulanito, Autor 2 Sutanito"
 date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
-output: bookdown::gitbook
-documentclass: book
+documentclass: krantz
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-cover-image: images/cover.png
-github-repo: fhernanb/libro_mod_pred
+colorlinks: yes
+lot: yes
+lof: yes
+site: bookdown::bookdown_site
 description: "Plantilla para libros hechos con bookdown."
+github-repo: fhernanb/plantilla_libros_con_bookdown
+graphics: yes
+cover-image: images/cover.jpg
 ---
+
+```{r setup, include=FALSE}
+options(
+  htmltools.dir.version = FALSE, formatR.indent = 2, width = 55, digits = 4
+)
+# install the packages needed by this book; you fill out c(), e.g. c('ggplot2', 'dplyr')
+lapply(c('xfun'), function(pkg) {
+  if (system.file(package = pkg) == '') install.packages(pkg)
+})
+```
 
 # Bienvenido {-}
 
@@ -27,8 +40,8 @@ knitr::include_graphics("images/cover.jpg")
 
 Este libro está destinado para estudiantes de ....
 
-[Fulanito de tal](https://fhernanb.github.io/)  
-[Sutanito de tal](http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001417591)  
+[Autor1 Fulanito de tal](https://ciencias.medellin.unal.edu.co/escuelas/estadistica/)  
+[Autor2 Sutanito de tal](https://ciencias.medellin.unal.edu.co/centros/documentacionrafaelbotero/)  
 
 ## Estructura del libro {-}
 
