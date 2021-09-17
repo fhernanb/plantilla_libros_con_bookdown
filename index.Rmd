@@ -7,8 +7,8 @@ bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 colorlinks: yes
-lot: yes
-lof: yes
+lot: false
+lof: false
 site: bookdown::bookdown_site
 description: "Plantilla para libros hechos con bookdown."
 github-repo: fhernanb/plantilla_libros_con_bookdown
@@ -38,14 +38,14 @@ knitr::write_bib(c(
 knitr::include_graphics("images/cover.jpg")
 ```
 
-Este libro está destinado para estudiantes de ....
+Este libro está destinado para estudiantes lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut elit condimentum, rutrum odio sed, ullamcorper libero. Fusce lobortis feugiat erat sed ornare. Nam magna odio, dapibus ac massa ut, auctor condimentum nisi. Proin sed lacus tincidunt, iaculis quam ac, condimentum justo.
 
 [Autor1 Fulanito de tal](https://ciencias.medellin.unal.edu.co/escuelas/estadistica/)  
 [Autor2 Sutanito de tal](https://ciencias.medellin.unal.edu.co/centros/documentacionrafaelbotero/)  
 
 ## Estructura del libro {-}
 
-En el capítulo \@ref(intro) se presenta el .
+En el capítulo \@ref(intro) se presenta una introducción, en el capítulo \@ref(ecua) se muestra como incluir ecuaciones con LaTeX, en el capítulo \@ref(met) no se muestra nada y en el capítulo \@ref(svm) se explican las máquinas de soporte vectorial.
 
 ## Software y convenciones {-}
 

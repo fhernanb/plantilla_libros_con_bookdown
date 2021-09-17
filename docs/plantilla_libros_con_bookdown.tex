@@ -118,7 +118,7 @@
   \usepackage{polyglossia}
   \setmainlanguage{spanish}
   % Tabla en lugar de cuadro
-  \gappto\captionsspanish{\renewcommand{\tablename}{Tabla}  
+  \gappto\captionsspanish{\renewcommand{\tablename}{Tabla}
           \renewcommand{\listtablename}{Índice de tablas}}
 \else
   \usepackage[spanish,es-tabla]{babel}
@@ -261,15 +261,13 @@
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
-\listoffigures
-\listoftables
 \hypertarget{bienvenido}{%
 \chapter*{Bienvenido}\label{bienvenido}}
 
 
 \begin{center}\includegraphics[width=0.5\linewidth]{images/cover} \end{center}
 
-Este libro está destinado para estudiantes de \ldots.
+Este libro está destinado para estudiantes lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut elit condimentum, rutrum odio sed, ullamcorper libero. Fusce lobortis feugiat erat sed ornare. Nam magna odio, dapibus ac massa ut, auctor condimentum nisi. Proin sed lacus tincidunt, iaculis quam ac, condimentum justo.
 
 \href{https://ciencias.medellin.unal.edu.co/escuelas/estadistica/}{Autor1 Fulanito de tal}\\
 \href{https://ciencias.medellin.unal.edu.co/centros/documentacionrafaelbotero/}{Autor2 Sutanito de tal}
@@ -278,7 +276,7 @@ Este libro está destinado para estudiantes de \ldots.
 \section*{Estructura del libro}\label{estructura-del-libro}}
 
 
-En el capítulo \ref{intro} se presenta el .
+En el capítulo \ref{intro} se presenta una introducción, en el capítulo \ref{ecua} se muestra como incluir ecuaciones con LaTeX, en el capítulo \ref{met} no se muestra nada y en el capítulo \ref{svm} se explican las máquinas de soporte vectorial.
 
 \hypertarget{software-y-convenciones}{%
 \section*{Software y convenciones}\label{software-y-convenciones}}
@@ -332,7 +330,7 @@ Advertencia.
 \hypertarget{intro}{%
 \chapter{Introduction}\label{intro}}
 
-You can label chapter and section titles using \texttt{\{\#label\}} after them, e.g., we can reference Chapter \ref{intro}. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \ref{methods}.
+You can label chapter and section titles using \texttt{\{\#label\}} after them, e.g., we can reference Chapter \ref{intro}. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \ref{met}.
 
 Figures and tables with captions will be placed in \texttt{figure} and \texttt{table} environments, respectively.
 
@@ -400,27 +398,8 @@ Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
 
 You can write citations, too. For example, we are using the \textbf{bookdown} package \citep{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
 
-\hypertarget{discri}{%
-\chapter{Análisis Discriminante}\label{discri}}
-
-Hola esto es una prueba y no es necesario compilar todo el libro, solo este capitulo.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{rnorm}\NormalTok{(}\AttributeTok{n=}\DecValTok{100}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{plot}\NormalTok{(}\FunctionTok{density}\NormalTok{(x))}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{plantilla_libros_con_bookdown_files/figure-latex/myplot01-1.pdf}
-
-\hypertarget{ecuaciones}{%
-\chapter{Ecuaciones}\label{ecuaciones}}
+\hypertarget{ecua}{%
+\chapter{Ecuaciones}\label{ecua}}
 
 En esta capítulo se muestra como crear ecuaciones con LaTeX.
 
@@ -474,28 +453,13 @@ y para referenciarla se escribe \texttt{\textbackslash{}@ref(eq:binom)} con lo c
 Para obtener más detalles de cómo incluir ecuaciones se recomienda consultar este \href{https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html\#theorems}{enlace}.
 \end{rmdtip}
 
-\hypertarget{methods}{%
-\chapter{Methods}\label{methods}}
+\hypertarget{met}{%
+\chapter{Methods}\label{met}}
 
 We describe our methods in this chapter.
 
-\hypertarget{applications}{%
-\chapter{Applications}\label{applications}}
-
-Some \emph{significant} applications are demonstrated in this chapter.
-
-\hypertarget{example-one}{%
-\section{Example one}\label{example-one}}
-
-Bla bla bla.
-
-\hypertarget{example-two}{%
-\section{Example two}\label{example-two}}
-
-Bla bla bla.
-
-\hypertarget{support-vector-machine}{%
-\chapter{Support vector machine}\label{support-vector-machine}}
+\hypertarget{svm}{%
+\chapter{Support vector machine}\label{svm}}
 
 \citet{Cortes1995} en el artículo titulado ``Support-Vector Networks'' propusieron las máquinas de soporte vectorial (svm) para el problema de clasificación.
 

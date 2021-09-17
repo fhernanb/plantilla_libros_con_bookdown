@@ -21,8 +21,7 @@
   <meta name="twitter:description" content="Plantilla para libros hechos con bookdown." />
   <meta name="twitter:image" content="/images/cover.jpg" />
 
-<meta name="author" content="Autor 1 Fulanito" />
-<meta name="author" content="Autor 2 Sutanito" />
+<meta name="author" content="Autor 1 Fulanito, Autor 2 Sutanito" />
 
 
 <meta name="date" content="2021-09-17" />
@@ -33,7 +32,7 @@
   
   
 <link rel="prev" href="index.html"/>
-<link rel="next" href="discri.html"/>
+<link rel="next" href="ecua.html"/>
 <script src="libs/header-attrs/header-attrs.js"></script>
 <script src="libs/jquery/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
@@ -167,19 +166,13 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#bloques-informativos"><i class="fa fa-check"></i>Bloques informativos</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="discri.html"><a href="discri.html"><i class="fa fa-check"></i><b>2</b> Análisis Discriminante</a></li>
-<li class="chapter" data-level="3" data-path="ecuaciones.html"><a href="ecuaciones.html"><i class="fa fa-check"></i><b>3</b> Ecuaciones</a>
+<li class="chapter" data-level="2" data-path="ecua.html"><a href="ecua.html"><i class="fa fa-check"></i><b>2</b> Ecuaciones</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="ecuaciones.html"><a href="ecuaciones.html#ecuaciones-dentro-de-un-párrafo"><i class="fa fa-check"></i><b>3.1</b> Ecuaciones dentro de un párrafo</a></li>
-<li class="chapter" data-level="3.2" data-path="ecuaciones.html"><a href="ecuaciones.html#ecuaciones-entre-párrafos"><i class="fa fa-check"></i><b>3.2</b> Ecuaciones entre párrafos</a></li>
+<li class="chapter" data-level="2.1" data-path="ecua.html"><a href="ecua.html#ecuaciones-dentro-de-un-párrafo"><i class="fa fa-check"></i><b>2.1</b> Ecuaciones dentro de un párrafo</a></li>
+<li class="chapter" data-level="2.2" data-path="ecua.html"><a href="ecua.html#ecuaciones-entre-párrafos"><i class="fa fa-check"></i><b>2.2</b> Ecuaciones entre párrafos</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
-<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
-<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="support-vector-machine.html"><a href="support-vector-machine.html"><i class="fa fa-check"></i><b>6</b> Support vector machine</a></li>
+<li class="chapter" data-level="3" data-path="met.html"><a href="met.html"><i class="fa fa-check"></i><b>3</b> Methods</a></li>
+<li class="chapter" data-level="4" data-path="svm.html"><a href="svm.html"><i class="fa fa-check"></i><b>4</b> Support vector machine</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
@@ -203,7 +196,7 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="intro" class="section level1" number="1">
 <h1><span class="header-section-number">Capítulo 1</span> Introduction</h1>
-<p>You can label chapter and section titles using <code>{#label}</code> after them, e.g., we can reference Chapter <a href="intro.html#intro">1</a>. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter <a href="methods.html#methods">4</a>.</p>
+<p>You can label chapter and section titles using <code>{#label}</code> after them, e.g., we can reference Chapter <a href="intro.html#intro">1</a>. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter <a href="met.html#met">3</a>.</p>
 <p>Figures and tables with captions will be placed in <code>figure</code> and <code>table</code> environments, respectively.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="intro.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, .<span class="dv">1</span>, .<span class="dv">1</span>))</span>
 <span id="cb5-2"><a href="intro.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pressure, <span class="at">type =</span> <span class="st">&#39;b&#39;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
@@ -390,7 +383,7 @@ Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd 
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="discri.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ecua.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>

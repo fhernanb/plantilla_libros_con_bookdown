@@ -1,4 +1,4 @@
-# Ecuaciones
+# Ecuaciones {#ecua}
 
 En esta capítulo se muestra como crear ecuaciones con LaTeX.
 

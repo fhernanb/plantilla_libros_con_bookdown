@@ -1,0 +1,9 @@
+fig:nice-fig
+tab:nice-tab
+eq:binom
+intro
+ecua
+ecuaciones-dentro-de-un-párrafo
+ecuaciones-entre-párrafos
+met
+svm
