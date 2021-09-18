@@ -1,0 +1,11 @@
+# Incluyendo referencias {#referencias}
+
+Es posible incluir artículos, libros y otro tipo de material como referencias. Para hacerlo se deben seguir los siguientes pasos:
+
+1. Colocar el libro o artículo en el archivo `book.bib` asignándole un alias.
+2. Citar el libro o artículo usando la instrucción `@alias`.
+
+A continuación se muestran un párrafo en el cual se cita un artículo al inicio del párrafo y se hace por medio de la instrucción `@Cortes1995` ya que el alias usado para el artículo fue Cortes1995. La referencia que aparece al inicio es "Cortes and Vapnik (1995)", esta referencia también aparecerá en la sección de Bibliografía.
+
+@Cortes1995 en el artículo titulado "Support-Vector Networks" propusieron las máquinas de soporte vectorial (svm) para el problema de clasificación.
+

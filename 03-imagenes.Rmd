@@ -1,0 +1,8 @@
+# Incluyendo imágenes {#imagenes}
+
+Se pueden incluir imágenes en el libro. La imágen debe estar almacenada en la carpeta `images`. A continuación un ejemplo de una imágen.
+
+```{r rmarkdown, echo=FALSE, out.width='60%', fig.align='center', fig.cap='Ilustración de svm.'}
+knitr::include_graphics("images/svm.png")
+```
+

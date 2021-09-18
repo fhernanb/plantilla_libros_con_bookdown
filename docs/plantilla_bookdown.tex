@@ -37,7 +37,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Plantilla de libro hecho con el paquete bookdown},
+  pdftitle={Plantilla para libros con bookdown},
   pdfauthor={Autor 1 Fulanito, Autor 2 Sutanito},
   colorlinks=true,
   linkcolor={Maroon},
@@ -224,9 +224,9 @@
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
-\title{Plantilla de libro hecho con el paquete bookdown}
+\title{Plantilla para libros con bookdown}
 \author{Autor 1 Fulanito, Autor 2 Sutanito}
-\date{2021-09-17}
+\date{2021-09-18}
 
 \begin{document}
 \maketitle
@@ -253,31 +253,25 @@
 }
 \listoffigures
 \listoftables
-\hypertarget{prefacio}{%
-\chapter*{Prefacio}\label{prefacio}}
+\hypertarget{bienvenida}{%
+\chapter*{Bienvenida}\label{bienvenida}}
 
 
-Hi there, this is my great book.
+Bienvenido, espero que esta plantilla le sea útil para que pueda crear sus propios libros usando el paquete \textbf{bookdown} \citep{R-bookdown} de R.
 
 \begin{center}\includegraphics[width=0.5\linewidth]{images/cover} \end{center}
-
-\hypertarget{por-quuxe9-leer-este-libro}{%
-\section*{¿Por qué leer este libro?}\label{por-quuxe9-leer-este-libro}}
-
-
-It is very important\ldots{}
 
 \hypertarget{estructura-del-libro}{%
 \section*{Estructura del libro}\label{estructura-del-libro}}
 
 
-El capítulo \ref{introduction} es una introducción, el capítulo \ref{ecua} muestra como incluir ecuaciones con LaTeX y en el capítulo \ref{svm} se da una explicación sencilla de máquinas de soporte vectorial.
+El capítulo \ref{intro} es una introducción, el capítulo \ref{ecua} muestra como incluir ecuaciones con LaTeX y en el capítulo \ref{imagenes} se da una explicación sencilla de como incluir imágenes.
 
-\hypertarget{software-information-and-conventions}{%
-\section*{Software information and conventions}\label{software-information-and-conventions}}
+\hypertarget{informaciuxf3n-del-software-utilizado-y-convenciones}{%
+\section*{Información del software utilizado y convenciones}\label{informaciuxf3n-del-software-utilizado-y-convenciones}}
 
 
-I used the \textbf{knitr}\index{knitr} package \citep{xie2015} and the \textbf{bookdown}\index{bookdown} package \citep{R-bookdown} to compile my book. My R session information is shown below:
+Para esta plantilla se usó el paquete \textbf{knitr}\index{knitr} \citep{xie2015} y el paquete \textbf{bookdown}\index{bookdown} \citep{R-bookdown} para compilar el libro. La información de la sesión de R usada se muestra abajo:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -309,18 +303,7 @@ I used the \textbf{knitr}\index{knitr} package \citep{xie2015} and the \textbf{b
 ##   utils_4.1.1     xfun_0.25       yaml_2.2.1
 \end{verbatim}
 
-Package names are in bold text (e.g., \textbf{rmarkdown}), and inline code and filenames are formatted in a typewriter font (e.g., \texttt{knitr::knit(\textquotesingle{}foo.Rmd\textquotesingle{})}). Function names are followed by parentheses (e.g., \texttt{bookdown::render\_book()}).
-
-\hypertarget{agradecimientos}{%
-\section*{Agradecimientos}\label{agradecimientos}}
-
-
-A lot of people helped me when I was writing the book.
-
-\begin{flushright}
-Frida Gomam\\
-on the Mars
-\end{flushright}
+Los nombres de los paquetes se escriben en negrita (por ejemplo, \textbf{rmarkdown}), el código dentro de un párrafo y el nombre de los archivos se escribe con fuente de máquina de escribir (por ejemplo, \texttt{knitr::knit(\textquotesingle{}foo.Rmd\textquotesingle{})}). Los nombres de las funciones van seguidas de paréntesis (por ejemplo, \texttt{dnorm()}).
 
 \hypertarget{bloques-informativos}{%
 \section*{Bloques informativos}\label{bloques-informativos}}
@@ -329,47 +312,84 @@ on the Mars
 En varias partes del libro usaremos bloques informativos para resaltar algún aspecto importante. Abajo se encuentra un ejemplo de los bloques y su significado.
 
 \begin{rmdnote}
-Nota aclaratoria.
+Esta será una nota aclaratoria.
 \end{rmdnote}
 
 \begin{rmdtip}
-Sugerencia.
+Esta será una sugerencia.
 \end{rmdtip}
 
 \begin{rmdwarning}
-Advertencia.
+Esta será una advertencia.
 \end{rmdwarning}
 
-\hypertarget{about-the-author}{%
-\chapter*{About the Author}\label{about-the-author}}
+\hypertarget{agradecimientos}{%
+\section*{Agradecimientos}\label{agradecimientos}}
 
 
-Frida Gomam is a famous lady. Police will always let her go.
+Gracias a todas las personas que han contribuído con sus comentarios para mejorar este material.
+
+\begin{flushright}
+Fulanito de tal.
+Sutanito de tal.
+\end{flushright}
+
+\hypertarget{sobre-los-autores}{%
+\chapter*{Sobre los autores}\label{sobre-los-autores}}
+
+
+Fulanito de tal es profesor de la Universidad X y bla bla bla.
+
+Sutanito de tal es investigador del Instituto Y y bla bla bla.
 
 \mainmatter
 
-\hypertarget{introduction}{%
-\chapter{Introduction}\label{introduction}}
+\hypertarget{intro}{%
+\chapter{Introducción}\label{intro}}
 
-Now unplug your Internet cable, and start doing some serious work.
+Una de las ventajas de usar el paquete \textbf{bookdown} \citep{R-bookdown} es que se puede escribir código de R y las salidas estarán incluídas automáticamente en el documento.
 
-We have a nice figure in Figure \ref{fig:hello}, and also a table in Table \ref{tab:iris}.
+\hypertarget{incluyendo-salidas-de-r}{%
+\section{Incluyendo salidas de R}\label{incluyendo-salidas-de-r}}
+
+A continuación se muestran los números de Tukey (minimum, lower-hinge, median, upper-hinge, maximum) generados con la función \texttt{fivenum()} aplicada a una muestra aleatoria de una normal estándar.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{rnorm}\NormalTok{(}\AttributeTok{n=}\DecValTok{80}\NormalTok{)}
+\FunctionTok{fivenum}\NormalTok{(}\AttributeTok{x=}\NormalTok{x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] -2.38993 -0.58749 -0.08438  0.72131  2.38320
+\end{verbatim}
+
+\hypertarget{incluyendo-figuras}{%
+\section{Incluyendo figuras}\label{incluyendo-figuras}}
+
+La Figura \ref{fig:hello} muestra un diagrama de dispersión para la distancia en función de la velocidad.
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{1}\NormalTok{, .}\DecValTok{1}\NormalTok{))}
-\FunctionTok{plot}\NormalTok{(cars, }\AttributeTok{pch =} \DecValTok{19}\NormalTok{)}
+\FunctionTok{plot}\NormalTok{(cars, }\AttributeTok{pch =} \DecValTok{19}\NormalTok{, }\AttributeTok{col=}\StringTok{\textquotesingle{}tomato\textquotesingle{}}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{figure}
-\includegraphics[width=0.9\linewidth]{plantilla_bookdown_files/figure-latex/hello-1} \caption{Hello World!}\label{fig:hello}
+\includegraphics[width=0.9\linewidth]{plantilla_bookdown_files/figure-latex/hello-1} \caption{Diagrama de dispersión para la distancia versus la velocidad}\label{fig:hello}
 \end{figure}
+
+\hypertarget{incluyendo-tablas}{%
+\section{Incluyendo tablas}\label{incluyendo-tablas}}
+
+La Tabla \ref{tab:iris} muestra las primeras líneas de la famosa base de datos Iris.
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}
-  \FunctionTok{head}\NormalTok{(iris), }\AttributeTok{caption =} \StringTok{\textquotesingle{}The boring iris data.\textquotesingle{}}\NormalTok{,}
+  \FunctionTok{head}\NormalTok{(iris), }\AttributeTok{caption =} \StringTok{\textquotesingle{}Encabezado de la base de datos Iris.\textquotesingle{}}\NormalTok{,}
   \AttributeTok{booktabs =} \ConstantTok{TRUE}
 \NormalTok{)}
 \end{Highlighting}
@@ -377,7 +397,7 @@ We have a nice figure in Figure \ref{fig:hello}, and also a table in Table \ref{
 
 \begin{table}
 
-\caption{\label{tab:iris}The boring iris data.}
+\caption{\label{tab:iris}Encabezado de la base de datos Iris.}
 \centering
 \begin{tabular}[t]{rrrrl}
 \toprule
@@ -393,8 +413,6 @@ Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
 \bottomrule
 \end{tabular}
 \end{table}
-
-More chapters to come in \texttt{02-foo.Rmd}, \texttt{03-bar}.Rmd, \ldots{}
 
 \hypertarget{ecua}{%
 \chapter{Ecuaciones}\label{ecua}}
@@ -451,12 +469,10 @@ y para referenciarla se escribe \texttt{\textbackslash{}@ref(eq:binom)} con lo c
 Para obtener más detalles de cómo incluir ecuaciones se recomienda consultar este \href{https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html\#theorems}{enlace}.
 \end{rmdtip}
 
-\hypertarget{svm}{%
-\chapter{Support vector machine}\label{svm}}
+\hypertarget{imagenes}{%
+\chapter{Incluyendo imágenes}\label{imagenes}}
 
-\citet{Cortes1995} en el artículo titulado ``Support-Vector Networks'' propusieron las máquinas de soporte vectorial (svm) para el problema de clasificación.
-
-Abajo se muestra una ilustración del método.
+Se pueden incluir imágenes en el libro. La imágen debe estar almacenada en la carpeta \texttt{images}. A continuación un ejemplo de una imágen.
 
 \begin{figure}
 
@@ -466,6 +482,24 @@ Abajo se muestra una ilustración del método.
 
 \caption{Ilustración de svm.}\label{fig:rmarkdown}
 \end{figure}
+
+\hypertarget{referencias}{%
+\chapter{Incluyendo referencias}\label{referencias}}
+
+Es posible incluir artículos, libros y otro tipo de material como referencias. Para hacerlo se deben seguir los siguientes pasos:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Colocar el libro o artículo en el archivo \texttt{book.bib} asignándole un alias.
+\item
+  Citar el libro o artículo usando la instrucción \texttt{@alias}.
+\end{enumerate}
+
+A continuación se muestran un párrafo en el cual se cita un artículo al inicio del párrafo y se hace por medio de la instrucción \texttt{@Cortes1995} ya que el alias usado para el artículo fue Cortes1995. La referencia que aparece al inicio es ``Cortes and Vapnik (1995)'', esta referencia también aparecerá en la sección de Bibliografía.
+
+\citet{Cortes1995} en el artículo titulado ``Support-Vector Networks'' propusieron las máquinas de soporte vectorial (svm) para el problema de clasificación.
 
 \cleardoublepage
 

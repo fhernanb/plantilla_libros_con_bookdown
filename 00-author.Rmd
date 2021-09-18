@@ -1,3 +1,5 @@
-# About the Author {-}
+# Sobre los autores {-}
 
-Frida Gomam is a famous lady. Police will always let her go.
+Fulanito de tal es profesor de la Universidad X y bla bla bla.
+
+Sutanito de tal es investigador del Instituto Y y bla bla bla.

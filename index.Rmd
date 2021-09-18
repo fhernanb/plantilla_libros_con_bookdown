@@ -1,5 +1,5 @@
 --- 
-title: "Plantilla de libro hecho con el paquete bookdown"
+title: "Plantilla para libros con bookdown"
 author: "Autor 1 Fulanito, Autor 2 Sutanito"
 date: "`r Sys.Date()`"
 documentclass: krantz
@@ -27,52 +27,48 @@ lapply(c('xfun'), function(pkg) {
 })
 ```
 
-# Prefacio {-}
+# Bienvenida {-}
 
-Hi there, this is my great book.
+Bienvenido, espero que esta plantilla le sea útil para que pueda crear sus propios libros usando el paquete **bookdown** [@R-bookdown] de R.
 
 ```{r echo=FALSE, out.width="50%", fig.align='center'}
 knitr::include_graphics("images/cover.jpg")
 ```
 
-## ¿Por qué leer este libro? {-}
-
-It is very important...
-
 ## Estructura del libro {-}
 
-El capítulo \@ref(introduction) es una introducción, el capítulo \@ref(ecua) muestra como incluir ecuaciones con LaTeX y en el capítulo \@ref(svm) se da una explicación sencilla de máquinas de soporte vectorial.
+El capítulo \@ref(intro) es una introducción, el capítulo \@ref(ecua) muestra como incluir ecuaciones con LaTeX y en el capítulo \@ref(imagenes) se da una explicación sencilla de como incluir imágenes.
 
-## Software information and conventions {-}
+## Información del software utilizado y convenciones{-}
 
-I used the **knitr**\index{knitr} package [@xie2015] and the **bookdown**\index{bookdown} package [@R-bookdown] to compile my book. My R session information is shown below:
+Para esta plantilla se usó el paquete **knitr**\index{knitr} [@xie2015] y el paquete **bookdown**\index{bookdown} [@R-bookdown] para compilar el libro. La información de la sesión de R usada se muestra abajo:
 
 ```{r}
 xfun::session_info()
 ```
 
-Package names are in bold text (e.g., **rmarkdown**), and inline code and filenames are formatted in a typewriter font (e.g., `knitr::knit('foo.Rmd')`). Function names are followed by parentheses (e.g., `bookdown::render_book()`).
-
-## Agradecimientos {-}
-
-A lot of people helped me when I was writing the book.
-
-```{block2, type='flushright', html.tag='p'}
-Frida Gomam  
-on the Mars
-```
+Los nombres de los paquetes se escriben en negrita (por ejemplo, **rmarkdown**), el código dentro de un párrafo y el nombre de los archivos se escribe con fuente de máquina de escribir (por ejemplo, `knitr::knit('foo.Rmd')`). Los nombres de las funciones van seguidas de paréntesis (por ejemplo, `dnorm()`).
 
 ## Bloques informativos {-}
 En varias partes del libro usaremos bloques informativos para resaltar algún aspecto importante. Abajo se encuentra un ejemplo de los bloques y su significado.
 
 ```{block2, type='rmdnote'}
-Nota aclaratoria.
+Esta será una nota aclaratoria.
 ```
 
 ```{block2, type='rmdtip'}
-Sugerencia.
+Esta será una sugerencia.
 ```
 
 ```{block2, type='rmdwarning'}
-Advertencia.
+Esta será una advertencia.
+```
+
+## Agradecimientos {-}
+
+Gracias a todas las personas que han contribuído con sus comentarios para mejorar este material.
+
+```{block2, type='flushright', html.tag='p'}
+Fulanito de tal.
+Sutanito de tal.
 ```

@@ -1,21 +1,35 @@
 \mainmatter
 
-# Introduction
+# Introducción {#intro}
 
-Now unplug your Internet cable, and start doing some serious work.
+Una de las ventajas de usar el paquete **bookdown** [@R-bookdown] es que se puede escribir código de R y las salidas estarán incluídas automáticamente en el documento.
 
-We have a nice figure in Figure \@ref(fig:hello), and also a table in Table \@ref(tab:iris).
+## Incluyendo salidas de R
 
-```{r hello, fig.cap='Hello World!', out.width='90%'}
-par(mar = c(4, 4, 1, .1))
-plot(cars, pch = 19)
+A continuación se muestran los números de Tukey (minimum, lower-hinge, median, upper-hinge, maximum) generados con la función `fivenum()` aplicada a una muestra aleatoria de una normal estándar.
+
+```{r}
+x <- rnorm(n=80)
+fivenum(x=x)
 ```
+
+## Incluyendo figuras
+
+La Figura \@ref(fig:hello) muestra un diagrama de dispersión para la distancia en función de la velocidad. 
+
+```{r hello, fig.cap='Diagrama de dispersión para la distancia versus la velocidad', out.width='90%'}
+par(mar = c(4, 4, 1, .1))
+plot(cars, pch = 19, col='tomato')
+```
+
+## Incluyendo tablas
+
+La Tabla \@ref(tab:iris) muestra las primeras líneas de la famosa base de datos Iris.
 
 ```{r iris}
 knitr::kable(
-  head(iris), caption = 'The boring iris data.',
+  head(iris), caption = 'Encabezado de la base de datos Iris.',
   booktabs = TRUE
 )
 ```
 
-More chapters to come in `02-foo.Rmd`, `03-bar`.Rmd, ...

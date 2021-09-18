@@ -1,0 +1,14 @@
+fig:hello
+tab:iris
+eq:binom
+fig:rmarkdown
+intro
+incluyendo-salidas-de-r
+incluyendo-figuras
+incluyendo-tablas
+ecua
+ecuaciones-dentro-de-un-párrafo
+ecuaciones-entre-párrafos
+imagenes
+referencias
+more-to-say
